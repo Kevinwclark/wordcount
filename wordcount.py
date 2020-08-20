@@ -34,7 +34,8 @@ def create_word_dict(filename):
     dictionary = {}
     with open(filename) as f:
         x = f.read()
-        listed = x.split()
+        y = x.lower()
+        listed = y.split()
         for word in listed:
             if word in dictionary:
                 dictionary[word] += 1
@@ -53,8 +54,8 @@ def print_words(filename):
 def print_top(filename):
     """Prints the top count listing for the given file."""
     dictionary = create_word_dict(filename)
-    sorted_dict = sorted(dictionary.items(), key=lambda x: x[0], reverse=True)
-    twenty = sorted_dict[:19]
+    sorted_dict = sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
+    twenty = sorted_dict[:20]
     for word, value in twenty:
         print(f'{word} : {value}')
 
