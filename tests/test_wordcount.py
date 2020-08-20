@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 Unit Test cases for wordcount
-
 Students should not modify this file.
 """
 
