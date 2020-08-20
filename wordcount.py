@@ -46,7 +46,7 @@ def create_word_dict(filename):
 
 def print_words(filename):
     dictionary = create_word_dict(filename)
-    sorted_dict = sorted(dictionary.keys(), key=lambda x: x.lower())
+    sorted_dict = sorted(dictionary.keys())
     for word in sorted_dict:
         print(f'{word} : {dictionary[word]}')
 
